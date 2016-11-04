@@ -8,6 +8,31 @@ icon: bookmark
 * content
 {:toc}
 
+# machine learning
+
+## online resources
+
+### online books
+1. [neural networks intro](https://www.willamette.edu/~gorr/classes/cs449/intro.html)  []
+2. [stanford:Deep Learning intro](http://deeplearning.stanford.edu/wiki/index.php/UFLDL_Tutorial)  []
+3. [stanford: CS231n:Convolutional Neural Networks for Visual Recognition](https://cs231n.github.io/)  []
+
+    the video lectures can be found in [斯坦福CS231n—深度学习与计算机视觉](http://study.163.com/course/courseMain.htm?courseId=1003223001)
+
+### online video
+1. [coursera:machine learning by Andrew NG](https://www.coursera.org/learn/machine-learning/home/welcome)  [x]
+2. [coursera:neural network for machine learning by Geoffrey Hinton](https://www.coursera.org/learn/neural-networks/home/welcome)  []
+3. [斯坦福CS231n—深度学习与计算机视觉](http://study.163.com/course/courseMain.htm?courseId=1003223001)  []
+
+### online code
+
+
+## tools
+
+
+
+# web
+
 ## 工具
 
 * [box-shadow generator](http://www.cssmatic.com/box-shadow)
