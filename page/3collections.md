@@ -13,22 +13,28 @@ icon: bookmark
 ## online resources
 
 ### online books
-1. [neural networks intro](https://www.willamette.edu/~gorr/classes/cs449/intro.html)  []
-2. [stanford:Deep Learning intro](http://deeplearning.stanford.edu/wiki/index.php/UFLDL_Tutorial)  []
-3. [stanford: CS231n:Convolutional Neural Networks for Visual Recognition](https://cs231n.github.io/)  []
-
+1. [neural networks intro](https://www.willamette.edu/~gorr/classes/cs449/intro.html)  [ ]
+2. [Deep Learning（深度学习）学习笔记整理系列1-8](http://blog.csdn.net/zouxy09/article/category/1387932)  [ ]<br/>
+    对深度学习的一个简单介绍，可以根据这八篇文章对深度学习有个总体印象。
+3. [stanford:Deep Learning intro](http://deeplearning.stanford.edu/wiki/index.php/UFLDL_Tutorial)  [ ]
+4. [stanford: CS231n:Convolutional Neural Networks for Visual Recognition](https://cs231n.github.io/)  [ ]<br/>
     the video lectures can be found in [斯坦福CS231n—深度学习与计算机视觉](http://study.163.com/course/courseMain.htm?courseId=1003223001)
+5. [deep learning by Ian Goodfellow and Yoshua Bengio and Aaron Courville](http://www.deeplearningbook.org/)  [ ]<br/>
+   Deep Learning is the only comprehensive book on the subject."--Elon Musk, co-chair of OpenAI;CEO of Tesla and SpaceX 这本被Elon Musk高度评价的来自Bengio的深度学习奇书。纸质版在amazon有售，贵的要死。这里附上的是电子版的。
 
 ### online video
-1. [coursera:machine learning by Andrew NG](https://www.coursera.org/learn/machine-learning/home/welcome)  [x]
-2. [coursera:neural network for machine learning by Geoffrey Hinton](https://www.coursera.org/learn/neural-networks/home/welcome)  []
-3. [斯坦福CS231n—深度学习与计算机视觉](http://study.163.com/course/courseMain.htm?courseId=1003223001)  []
+1. [coursera:machine learning by Andrew NG](https://www.coursera.org/learn/machine-learning/home/welcome) [x]
+2. [coursera:neural network for machine learning by Geoffrey Hinton](https://www.coursera.org/learn/neural-networks/home/welcome)  [ ]
+3. [斯坦福CS231n—深度学习与计算机视觉](http://study.163.com/course/courseMain.htm?courseId=1003223001)  [ ]
 
 ### online code
 
 
 ## tools
 
+### online markdown editor
+1. <https://markable.in/>
+2. <http://dillinger.io/>
 
 
 # web
