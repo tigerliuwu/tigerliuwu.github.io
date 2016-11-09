@@ -30,6 +30,10 @@ icon: bookmark
 ### online code
 
 
+### others
+1. [距离和相似性度量方法](http://www.cnblogs.com/daniel-D/p/3244718.html)
+2. [activation function](https://en.wikipedia.org/wiki/Activation_function)
+3. [loss function](https://en.wikipedia.org/wiki/Loss_function)
 ## tools
 
 ### online markdown editor

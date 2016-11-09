@@ -69,6 +69,11 @@ Event 有三种子实体：Account Event, Financial Event以及Contact Event。�
 而子实体中的属性是各个子实体所特有的。下图表示一个Event实例是由它的三个子实体任意组装拼凑出来的。<br/>
 ![Identifying Parent-Child Relationship](/images/LDM/LDM-figure1-5.jpg)
 
+<br/>
+$$
+[0.5, -1, 0] \rightarrow [e^{0.5}, e^{-1}, e^0] = [1.65, 0.37, 1] \rightarrow [0.55, 0.12, 0.33]
+$$
+
 
 
 
