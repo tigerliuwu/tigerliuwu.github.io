@@ -58,21 +58,17 @@ tags:  逻辑数据模型
 当父实体不存在的时候，该属性的值为null。如下图所示：<br/>
 ![Identifying Parent-Child Relationship](/images/LDM/LDM-figure1-3.jpg)
 
-4. **排它式子型关系**<br/>
-父实体Account中所有的属性子实体Account Checking和Account Saving中都有；而子实体中的属性为各个子属性特有的。
+4. **互斥型关系**<br/>
+父类型Account中所有的属性子类型Account Checking和Account Saving中都有；而子类型中的属性为各个子类型所特有的。
 其中Account type表示该Account是Account checking还是Account Saving。针对某一个Account实例，
-要么存在一个Saving Account实例，或者Checking Account实例，要么根本不存在任何实例。<br/>
+要么是一个Saving Account实例，或者Checking Account实例，要么根本不属于这两种子类型实例。<br/>
 ![Identifying Parent-Child Relationship](/images/LDM/LDM-figure1-4.jpg)
 
-5. **包含式子型关系**<br/>
-Event 有三种子实体：Account Event, Financial Event以及Contact Event。父型Event中所有的属性都是子实体中共同的属性，
-而子实体中的属性是各个子实体所特有的。下图表示一个Event实例是由它的三个子实体任意组装拼凑出来的。<br/>
+5. **内含型关系**<br/>
+Event 有三种子类型：Account Event, Financial Event以及Contact Event。父类型Event中所有的属性都是子类型中共同的属性，
+而子类型中的属性是各个子类型所特有的。下图表示一个Event实例可以都是它的三个子类型。<br/>
 ![Identifying Parent-Child Relationship](/images/LDM/LDM-figure1-5.jpg)
 
-<br/>
-$$
-[0.5, -1, 0] \rightarrow [e^{0.5}, e^{-1}, e^0] = [1.65, 0.37, 1] \rightarrow [0.55, 0.12, 0.33]
-$$
 
 
 

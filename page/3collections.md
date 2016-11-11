@@ -24,8 +24,10 @@ icon: bookmark
 
 ### online video
 1. [coursera:machine learning by Andrew NG](https://www.coursera.org/learn/machine-learning/home/welcome) [x]
-2. [coursera:neural network for machine learning by Geoffrey Hinton](https://www.coursera.org/learn/neural-networks/home/welcome)  [ ]
-3. [斯坦福CS231n—深度学习与计算机视觉](http://study.163.com/course/courseMain.htm?courseId=1003223001)  [ ]
+2. [网易公开课:machine learning by Andrew NG](http://open.163.com/special/opencourse/machinelearning.html) [] <br/>
+    [学习笔记](http://www.cnblogs.com/jerrylead/tag/Machine%20Learning/)
+3. [coursera:neural network for machine learning by Geoffrey Hinton](https://www.coursera.org/learn/neural-networks/home/welcome)  [ ]
+4. [斯坦福CS231n—深度学习与计算机视觉](http://study.163.com/course/courseMain.htm?courseId=1003223001)  [ ]
 
 ### online code
 
@@ -34,13 +36,16 @@ icon: bookmark
 1. [距离和相似性度量方法](http://www.cnblogs.com/daniel-D/p/3244718.html)
 2. [activation function](https://en.wikipedia.org/wiki/Activation_function)
 3. [loss function](https://en.wikipedia.org/wiki/Loss_function)
+4. [Introduction to Machine Learning Course](http://www.cedar.buffalo.edu/~srihari/CSE574/)
+    没来得及看，先留着。
+
 ## tools
 
 ### online markdown editor
 1. <https://markable.in/>
 2. <http://dillinger.io/>
-
-
+3. [Online LaTex Equation Editor](http://www.codecogs.com/latex/eqneditor.php)
+4. [support diagram & math formula](https://www.zybuluo.com/mdeditor#394675)
 # web
 
 ## 工具
