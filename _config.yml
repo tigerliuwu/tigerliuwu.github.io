@@ -9,7 +9,7 @@
 title: LW
 brief-intro: Software Engineer
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://tigerliuwu.github.io" # the base hostname & protocol for your site
+url: "https://tigerliuwu.github.io" # the base hostname & protocol for your site
 
 permalink: /:year/:month/:day/:title/
 
