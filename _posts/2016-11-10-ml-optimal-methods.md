@@ -61,15 +61,62 @@ $$
 该算法所选择的**搜索方向为最速下降方向，其中\\(p_k = \frac{\partial f_{\Theta}(X, Y, \Theta)}{\partial \theta_k}\\)**。
 
 ### principle(原则)
+* **learning rate的选择** <br/>
+选择一个足够小的值，确保loss function的值不会发散，最后收敛于一个稳定额值。如下图所示：<br/>
+![](/images/ML/GD_converge.jpg)
 
-### batch gradient Descent
-
-### stochastic gradient descent
+### batch gradient Descent(full gradient descent)
+计算损失函数在整个训练集上的梯度方向，沿着该方向搜寻下一个迭代点。”batch“的含义是训练集中所有样本参与每一轮迭代。<br/>
+损失函数如下：<br/>
+$$
+Loss(X,Y,\Theta) = \frac{1}{2m} * \sum_{i=1}^{m}(h_{\theta}(x^i) - y^i )^2
+$$
+<br/>
+训练算法如下：<br/>
+repeat \\(minimize Loss\\):{<br/>
+$$
+\theta_j = \theta_j - \frac{\alpha}{m} * \sum_{i=1}^{m}(h_{\theta}(x^i) - y^i ) * x_j^i
+$$
+<br/>
+}
 
 ### mini-batch gradient descent
 
-## Newton(牛顿法)
+假设训练集有m个样本，每个mini-batch（训练集的一个子集）有b个样本，那么，整个训练集可以分成m/b个mini-batch。我们用ω表示一个mini-batch, 用Ωj表示第j轮迭代中所有mini-batch集合，有：
+$$
+\Omega = \{w_k:k=1,2,\cdots,\frac{m}{b}\}
+$$
+<br/>
+算法如下：<br/>
+repeat {<br/>
+repeat {<br/>
+$$
+\theta_j = \theta_j - \frac{\alpha}{b} * \sum_{i=1}^{b}(h_{\theta}(x^i) - y^i ) * x_j^i
+$$
+<br/>
+} for (k = 1,2,...,m/b) <br/>
+}
 
+
+### stochastic gradient descent
+随机梯度下降算法（SGD）是mini-batch GD的一个特殊应用。SGD等价于b=1的mini-batch GD。即，每个mini-batch中只有一个训练样本。<br/>
+**应用：主要用于online learning**
+
+## Newton(牛顿法)
+![](/images/ML/Newton_method1.gif)<br/>
+![](/images/ML/Newton_method2.gif)
+
+如上图所示，牛顿算法使用数学的方式，一步达到最优的参数值。
+
+缺点：在进行海量数据计算时，计算H(hessian)的逆需要大量的空间和时间，成本太高。
+
+### BFGS(变尺度法)
+属于quasi-Newton方法中的一种
+
+### L-BFGS
+在生产环境中，使用最多的一种。
+
+## conjugate gradient
 
 
 # references(参考)
@@ -77,3 +124,5 @@ $$
 2. [Optimal Weight and Learning Rates for Linear Networks](https://www.willamette.edu/~gorr/classes/cs449/LearningRates/LearningRates.html)
 3. book:"Introduction to Convex Optimization for Machine
 Learning" by John Duchi
+4. [Approximations Of Roots Of Functions – Newton's Method](http://www.phengkimving.com/calc_of_one_real_var/08_app_of_the_der_part_2/08_05_approx_of_roots_of_func_newtons_meth.htm)
+5. [batch-GD， SGD， Mini-batch-GD， Stochastic GD， Online-GD -- 大数据背景下的梯度训练算法](http://www.cnblogs.com/richqian/p/4549590.html)

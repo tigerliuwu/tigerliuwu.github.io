@@ -10,7 +10,9 @@ author: Wu Liu
 {:toc}
 
 **overview**<br/>
-对主题模型中十大主题进行描述
+在传统的金融机构中，数据模型通常是由下面的三个概念开始的：客户(customer)-帐号(account)-交易(transaction),即(C-A-T)。换句话说，就是客户跟帐号
+关联，帐号跟交易关联；在保险行业，客户(customer)跟保单(Policies)关联，保单跟理赔(Claims)关联。
+<br/>这里对主题模型中十大主题进行描述。
 
 
 
@@ -94,7 +96,7 @@ LOCATION主题包含“具体地址”、“地区”、“地理位置”等不
 
 
 ### finance
-
+**财务，包括财务科目，总帐和转帐凭证**<br/>
 > Major Features
 > Tracks General Ledger and Journal Voucher information
 > GL Subtyping - Assets, Liabilities, Equity, Revenue and Expense
@@ -163,10 +165,12 @@ An event that involves a contact with a customer involves zero, one or many
 Parties that are internal organizations of the financial institution.
 
 ### Party-Location Relationships
+**同一个人或者组织的物理地址会因为搬家而发生多个变更，而同一个电子邮箱也可以被多人或者组织共同使用。**
 A physical address, over time, is occupied by one or more parties.
 An electronic address can be used by one or more parties.
 
 ### Party-Campaign Relationships
+**一种促销活动可以针对多个客户，同一个客户也可以参与多个促销活动。**
 A Party is assigned to zero, one or many market segments.
 A Party is targeted by zero, one or many campaigns.
 A Party has a response score for a promotion.
@@ -175,6 +179,7 @@ organization such as sales district, region or branch. This would be used, for
 example, if a promotion were for signage at various branches.
 A marketing segment associated with a campaign is created by one employee.
 ### Party-Channel Relationships
+**例如超市有多个ATM，pos机等，而ATM机虽位于超市，但是归属于商业银行**
 A Party may have many roles with many channels (houses, owns). The Party
 need not be the financial institution; e.g. a supermarket that houses an ATM, a
 POS or a kiosk.
@@ -187,6 +192,7 @@ ATM channel is housed by one financial institution organization and managed
 by another.
 
 ### Product-Agreement Relationships
+**一个帐号在某一时间只能对应一个产品，而一个产品包可以有多个帐号**
 An agreement at any one time is related to only one Product. Over a period of
 time, an Agreement may be related to more than one Product. An example of
 an Agreement that over time can be related to many Products is when a
@@ -196,12 +202,15 @@ The Agreement is also related to the Package of which the Product is a part.
 A Product for an Agreement does not have to be part of a Package.
 
 ### Product-Event Relationships
+**一个跟客户的联系事件可能牵涉到多个金融产品和服务**
 A contact Event with a customer involves zero, one or many products.
 One script sequence can be used when selling one product.
 ### Product-Location Relationships
+**旅行保险可在多个物理区域具有有效性**
 A Product, such as travel insurance, may be valid in one or many
 geographical areas.
 ### Product-Campaign Relationships
+**促销活动可以推销多个产品，同一种产品也可在不同的促销活动中**
 A Product is marketed via zero, one or many campaigns. A Campaign
 markets zero, one, or many Products.
 A Promotion may target zero, one or many Cluster (Party) Groups.
@@ -211,15 +220,17 @@ example, a feature that is a selling point may be the interest rate or the waive
 of an annual fee for the first year.
 
 ### Product-Channel Relationships
-A Product may be sold or serviced via one or many channel types.
+
+> A Product may be sold or serviced via one or many channel types.
 
 ### Agreement-Event Relationships
-An Event involves zero or one Agreements.
-An Event may be a financial event that affects the balance of an Agreement
-such as withdrawal, deposit, loan payment, premium payment, and claim
-payout.
-A Contact Event may involve a Card. Examples are credit card transaction or
-ATM withdrawal.
+
+> An Event involves zero or one Agreements.
+> An Event may be a financial event that affects the balance of an Agreement
+> such as withdrawal, deposit, loan payment, premium payment, and claim
+> payout.
+> A Contact Event may involve a Card. Examples are credit card transaction or
+> ATM withdrawal.
 
 ###Agreement-Location Relationships
 An Agreement may have its statements sent to multiple addresses.
@@ -231,8 +242,6 @@ An Agreement was created as a result of zero or one campaign.
 The costs of an Agreement are allocated to zero, one or many channels.
 An Agreement is to be used at zero, one or many specific Channels.
 An Agreement has its primary activity at zero or one specific Channel.
-
-
 
 ### Event-Campaign Relationships
 > An event involving a contact with a customer is the result of zero or one campaign.
