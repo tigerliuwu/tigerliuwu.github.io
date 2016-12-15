@@ -11,6 +11,8 @@ author: Wu Liu
 **This blog we're going to talk about principal compononent analysis to compress the original data, PCA is used to reduce the dimension of the samples.**
 
 
+
+
 # feature normalization
 
 ## import modules

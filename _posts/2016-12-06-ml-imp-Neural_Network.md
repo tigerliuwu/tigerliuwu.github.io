@@ -10,6 +10,9 @@ author: Wu Liu
 {:toc}
 **This blog's aim is demo the neural network, including both the algorithm and implementation**
 
+
+
+
 # visualise 100 samples
 
 ## import the necessary modules
