@@ -24,6 +24,7 @@ type: page
    Deep Learning is the only comprehensive book on the subject."--Elon Musk, co-chair of OpenAI;CEO of Tesla and SpaceX 这本被Elon Musk高度评价的来自Bengio的深度学习奇书。纸质版在amazon有售，贵的要死。这里附上的是电子版的。
 
    中文版：<https://github.com/exacity/deeplearningbook-chinese>
+6. [ML tutorial by Andrew Moore](https://www.autonlab.org/tutorials)
 
 ### online video
 1. [coursera:machine learning by Andrew NG](https://www.coursera.org/learn/machine-learning/home/welcome) [x]
@@ -32,10 +33,13 @@ type: page
 该视频没有具体的实现代码，主要介绍了股票的交易规则，风险计算，投资组合优化，股票基本面分析，技术面分析等。(optional)
 
 3. [网易公开课:machine learning by Andrew NG](http://open.163.com/special/opencourse/machinelearning.html) [] <br/>
-    [学习笔记](http://www.cnblogs.com/jerrylead/tag/Machine%20Learning/)
+  - [材料和考试](http://cs229.stanford.edu/materials.html)  
+  - [学习笔记](http://www.cnblogs.com/jerrylead/tag/Machine%20Learning/)
 4. [coursera:neural network for machine learning by Geoffrey Hinton](https://www.coursera.org/learn/neural-networks/home/welcome)  [ ]
 5. [斯坦福CS231n—深度学习与计算机视觉](http://study.163.com/course/courseMain.htm?courseId=1003223001)  [ ]
+6. [learning from data by Yaser Abu-Mostafa](http://open.163.com/special/opencourse/learningfromdata.html)
 
+   - [material](http://work.caltech.edu/library/)
 ### online code
 
 
