@@ -10,9 +10,12 @@ author: Wu Liu
 {:toc}
 
 **Overview**
-Logistic Regression
 
 
 
 
-#aaa
+
+
+
+# reference
+- [](http://www.cnblogs.com/daniel-D/p/3244718.html)
