@@ -13,6 +13,8 @@ type: page
 
 ## online resources
 
+[英文：ML/DL Resources At One Place](https://github.com/vyraun/Megalodon)
+
 ### online books
 1. [neural networks intro](https://www.willamette.edu/~gorr/classes/cs449/intro.html)  [ ]
 2. [Deep Learning（深度学习）学习笔记整理系列1-8](http://blog.csdn.net/zouxy09/article/category/1387932)  [ ]<br/>
@@ -33,7 +35,7 @@ type: page
 该视频没有具体的实现代码，主要介绍了股票的交易规则，风险计算，投资组合优化，股票基本面分析，技术面分析等。(optional)
 
 3. [网易公开课:machine learning by Andrew NG](http://open.163.com/special/opencourse/machinelearning.html) [] <br/>
-  - [材料和考试](http://cs229.stanford.edu/materials.html)  
+  - [材料和考试](http://cs229.stanford.edu/materials.html)
   - [学习笔记](http://www.cnblogs.com/jerrylead/tag/Machine%20Learning/)
 4. [coursera:neural network for machine learning by Geoffrey Hinton](https://www.coursera.org/learn/neural-networks/home/welcome)  [ ]
 5. [斯坦福CS231n—深度学习与计算机视觉](http://study.163.com/course/courseMain.htm?courseId=1003223001)  [ ]
