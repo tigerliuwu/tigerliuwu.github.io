@@ -60,8 +60,9 @@ HIVE_CONF=/opt/apache-kylin-2.3.2-bin/hadoop_conf/
 HCAT_HOME=/opt/cloudera/parcels/CDH/lib/hive-hcatalog/share/hcatalog/
 HIVE_LIB=/opt/cloudera/parcels/CDH/lib/hive/lib
 HBASE_CONF_DIR=/opt/apache-kylin-2.3.2-bin/hadoop_conf/
+HADOOP_CONF_DIR=/opt/apache-kylin-2.3.2-bin/hadoop_conf/
+HBASE_CONF=/opt/apache-kylin-2.3.2-bin/hadoop_conf/
 ```
-
 **执行$source /etc/profile**
 
 # 运行kylin
@@ -75,14 +76,15 @@ bin/kylin.sh stop
 
 日志打印出：**web ui is at http://<hostname>:7070/kylin**,表示成功安装(user/pwd:ADMIN/KYLIN)
 
+**问题：**<br/>
+<font color='red'>如果没有正确启动，根据显示的错误信息进行配置排查。例如：显示zookeeper无法连接，可以通过hbase shell来证明是否hbase客户端是否正常运行。如果没有正常运行，查看/etc/hbase/conf/hbase-site.xml文件，如果该文件为空，需将该文件替换掉。</font>
+
 ## metadata备份和恢复
 
 ```
 bin/metastore.sh backup
 bin/metastore.sh restore %path%
 ```
-
-
 
 # 参考
  - [CDH追加节点](https://cloud.tencent.com/developer/article/1078286)
