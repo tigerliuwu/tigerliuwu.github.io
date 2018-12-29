@@ -81,6 +81,7 @@ COMPUTE STATISTICS [noscan];
 SET mapreduce.job.queuename=［queune name］;
 
 eg.
+```
 SET mapreduce.job.queuename=root.default;
 select count(*) from tbl;
 ```
