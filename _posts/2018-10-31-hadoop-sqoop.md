@@ -123,8 +123,15 @@ alter table ${table_name} set serdeproperties('serialization.null.format'='\\N')
 
 ### 问题
 
+#### 问题1
+ - 现象：Caused by:java.sql.SQLRecoverableException:IO Error: Connection reset<br/>
+ - 原因：Sqoop 2 Server的Java堆栈(Java Heap Size of Sqoop 2 Server in Bytes)设置太少，
+ - 解决：调大即可。
+ - refer to [Java Heap Size of Sqoop 2 Server in Bytes](https://www.cloudera.com/documentation/enterprise/properties/5-8-x/topics/cm_props_cdh470_sqoop2.html)
+
+#### 问题2
  - <font color='red'>oracle表中null值，导出的文件格式为csv时，空值无法识别。</font>
- - 
+
 # 参考
  - [hive open csv serde2](https://cwiki.apache.org/confluence/display/Hive/CSV+Serde)
  - [hive csv serde](https://github.com/ogrodnek/csv-serde)
