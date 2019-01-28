@@ -132,6 +132,68 @@ alter table ${table_name} set serdeproperties('serialization.null.format'='\\N')
 #### 问题2
  - <font color='red'>oracle表中null值，导出的文件格式为csv时，空值无法识别。</font>
 
+#### 问题3
+
+ - <b>Problem: When using the default Sqoop connector for Oracle, some data does get transferred, but during the map-reduce job a lot of errors are reported as belows:</b>
+```
+11/05/26 16:23:47 INFO mapred.JobClient: Task Id : attempt_201105261333_0002_m_000002_0, Status : FAILED
+java.lang.RuntimeException: java.lang.RuntimeException: java.sql.SQLRecoverableException: IO Error: Connection reset
+at com.cloudera.sqoop.mapreduce.db.DBInputFormat.setConf(DBInputFormat.java:164)
+at org.apache.hadoop.util.ReflectionUtils.setConf(ReflectionUtils.java:62)
+at org.apache.hadoop.util.ReflectionUtils.newInstance(ReflectionUtils.java:117)
+at org.apache.hadoop.mapred.MapTask.runNewMapper(MapTask.java:605)
+at org.apache.hadoop.mapred.MapTask.run(MapTask.java:322)
+at org.apache.hadoop.mapred.Child$4.run(Child.java:268)
+at java.security.AccessController.doPrivileged(Native Method)
+at javax.security.auth.Subject.doAs(Subject.java:396)
+at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1115)
+at org.apache.hadoop.mapred.Child.main(Child.java:262)
+Caused by: java.lang.RuntimeException: java.sql.SQLRecoverableException: IO Error: Connection reset
+at com.cloudera.sqoop.mapreduce.db.DBInputFormat.getConnection(DBInputFormat.java:190)
+at com.cloudera.sqoop.mapreduce.db.DBInputFormat.setConf(DBInputFormat.java:159)
+... 9 more
+Caused by: java.sql.SQLRecoverableException: IO Error: Connection reset
+at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:428)
+at oracle.jdbc.driver.PhysicalConnection.<init>(PhysicalConnection.java:536)
+at oracle.jdbc.driver.T4CConnection.<init>(T4CConnection.java:228)
+at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:32)
+at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:521)
+at java.sql.DriverManager.getConnection(DriverManager.java:582)
+at java.sql.DriverManager.getConnection(DriverManager.java:185)
+at com.cloudera.sqoop.mapreduce.db.DBConfiguration.getConnection(DBConfiguration.java:152)
+at com.cloudera.sqoop.mapreduce.db.DBInputFormat.getConnection(DBInputFormat.java:184)
+... 10 more
+Caused by: java.net.SocketException: Connection reset
+at java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:96)
+at java.net.SocketOutputStream.write(SocketOutputStream.java:136)
+at oracle.net.ns.DataPacket.send(DataPacket.java:199)
+at oracle.net.ns.NetOutputStream.flush(NetOutputStream.java:211)
+at oracle.net.ns.NetInputStream.getNextPacket(NetInputStream.java:227)
+at oracle.net.ns.NetInputStream.read(NetInputStream.java:175)
+at oracle.net.ns.NetInputStream.read(NetInputStream.java:100)
+at oracle.net.ns.NetInputStream.read(NetInputStream.java:85)
+at oracle.jdbc.driver.T4CSocketInputStreamWrapper.readNextPacket(T4CSocketInputStreamWrapper.java:123)
+at oracle.jdbc.driver.T4CSocketInputStreamWrapper.read(T4CSocketInputStreamWrapper.java:79)
+at oracle.jdbc.driver.T4CMAREngine.unmarshalUB1(T4CMAREngine.java:1122)
+at oracle.jdbc.driver.T4CMAREngine.unmarshalSB1(T4CMAREngine.java:1099)
+at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:288)
+at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:191)
+at oracle.jdbc.driver.T4CTTIoauthenticate.doOAUTH(T4CTTIoauthenticate.java:366)
+at oracle.jdbc.driver.T4CTTIoauthenticate.doOAUTH(T4CTTIoauthenticate.java:752)
+at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:366)
+... 18 more
+```
+
+ - Solution: This problem occurs primarily due to the lack of a fast random number generation device on the host where the map tasks execute. On typical Linux systems this can be addressed by setting the following property in the java.security file:
+
+```
+securerandom.source=file:/dev/../dev/urandom
+```
+
+
+[Oracle: Connection Reset Errors](https://sqoop.apache.org/docs/1.4.6/SqoopUserGuide.html#_oracle_connection_reset_errors)
+
+
 # 参考
  - [hive open csv serde2](https://cwiki.apache.org/confluence/display/Hive/CSV+Serde)
  - [hive csv serde](https://github.com/ogrodnek/csv-serde)

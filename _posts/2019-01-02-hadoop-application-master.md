@@ -1,8 +1,8 @@
 ---
 layout: post
 title:  "CDH - application master介绍"
-categories: [hadoop, hive]
-tags: [hadoop, hive]
+categories: [hadoop, AM]
+tags: [hadoop, AM]
 author: Wu Liu
 ---
 
