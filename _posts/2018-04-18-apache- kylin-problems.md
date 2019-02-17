@@ -60,7 +60,6 @@ step 1 name:create intermediate flat hive table的时候，抛出NPE, 查看日�
 可能是HCatalog安装有点问题。也有可能kap RC版不稳定。
 
 ## query
-1. fact表和维度表关联的时候，使用组合主键。那么该维度表的derived字段的值在cube里面都是空的。
 
 2. 集合A union 集合B，如果A为空，那么基于A union B作聚合计算会抛错
 
@@ -125,12 +124,20 @@ org.apache.kylin.rest.exception.InternalErrorException:Query returned xxxxxxxxx 
 kylin.query.max-return-rows=10000000
 ```
 
+4. merge segments的过程中，有时候会碰到多个segments合并后依然为空，merge就会失败
+<b>解决方案：</b><br/>
+```
+kylin.cube.is-automerge-enabled=false;
+```
+然后手动merge一个size >0 segment的多个segments，即可规避该问题。
+
+note:<br/>
+此参数可在system settings里面设置，无需重启。
 
 
-
-
-
-
+5. fact表和维度表关联的时候，使用组合主键。那么该维度表的derived字段的值在cube里面都是空的。
+<b>解决方案：</b><br/>
+维度表的组合主键都需要设置为normal类型而不是derived类型
 
 
 # 参考
